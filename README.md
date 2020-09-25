@@ -31,7 +31,7 @@ Currently, possible inputs are all the flags for `kind cluster create`, with the
 
 Optional inputs:
 
-- `version`: version of Kind to use (default `"v0.7.0"`)
+- `version`: version of Kind to use (default `"v0.9.0"`)
 - `config`: path (relative to the root of the repository) to a kind config file. If omitted, a default 1-node cluster will be created
 - `image`: node Docker image to use for booting the cluster.
 - `name`: cluster context name (default `"kind-kind"`)
@@ -51,7 +51,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: engineerd/setup-kind@v0.4.0
       with:
-          version: "v0.7.0"
+          version: "v0.9.0"
     - name: Testing
       run: |
         kubectl cluster-info
